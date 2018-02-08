@@ -1,0 +1,563 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6B2EAA75202CF04A00F9682D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2EAA74202CF04A00F9682D /* AppDelegate.swift */; };
+		6B2EAA77202CF04A00F9682D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2EAA76202CF04A00F9682D /* ViewController.swift */; };
+		6B2EAA7A202CF04A00F9682D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B2EAA78202CF04A00F9682D /* Main.storyboard */; };
+		6B2EAA7C202CF04A00F9682D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B2EAA7B202CF04A00F9682D /* Assets.xcassets */; };
+		6B2EAA7F202CF04A00F9682D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B2EAA7D202CF04A00F9682D /* LaunchScreen.storyboard */; };
+		6B2EAA8A202CF04B00F9682D /* MDBTriviaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2EAA89202CF04B00F9682D /* MDBTriviaTests.swift */; };
+		6B2EAA95202CF04B00F9682D /* MDBTriviaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2EAA94202CF04B00F9682D /* MDBTriviaUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6B2EAA86202CF04B00F9682D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6B2EAA69202CF04A00F9682D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6B2EAA70202CF04A00F9682D;
+			remoteInfo = MDBTrivia;
+		};
+		6B2EAA91202CF04B00F9682D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6B2EAA69202CF04A00F9682D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6B2EAA70202CF04A00F9682D;
+			remoteInfo = MDBTrivia;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		6B2EAA71202CF04A00F9682D /* MDBTrivia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MDBTrivia.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B2EAA74202CF04A00F9682D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6B2EAA76202CF04A00F9682D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6B2EAA79202CF04A00F9682D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6B2EAA7B202CF04A00F9682D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6B2EAA7E202CF04A00F9682D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6B2EAA80202CF04A00F9682D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6B2EAA85202CF04B00F9682D /* MDBTriviaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MDBTriviaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B2EAA89202CF04B00F9682D /* MDBTriviaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDBTriviaTests.swift; sourceTree = "<group>"; };
+		6B2EAA8B202CF04B00F9682D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6B2EAA90202CF04B00F9682D /* MDBTriviaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MDBTriviaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B2EAA94202CF04B00F9682D /* MDBTriviaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDBTriviaUITests.swift; sourceTree = "<group>"; };
+		6B2EAA96202CF04B00F9682D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6B2EAA6E202CF04A00F9682D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6B2EAA82202CF04B00F9682D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6B2EAA8D202CF04B00F9682D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6B2EAA68202CF04A00F9682D = {
+			isa = PBXGroup;
+			children = (
+				6B2EAA73202CF04A00F9682D /* MDBTrivia */,
+				6B2EAA88202CF04B00F9682D /* MDBTriviaTests */,
+				6B2EAA93202CF04B00F9682D /* MDBTriviaUITests */,
+				6B2EAA72202CF04A00F9682D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6B2EAA72202CF04A00F9682D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6B2EAA71202CF04A00F9682D /* MDBTrivia.app */,
+				6B2EAA85202CF04B00F9682D /* MDBTriviaTests.xctest */,
+				6B2EAA90202CF04B00F9682D /* MDBTriviaUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6B2EAA73202CF04A00F9682D /* MDBTrivia */ = {
+			isa = PBXGroup;
+			children = (
+				6B2EAA74202CF04A00F9682D /* AppDelegate.swift */,
+				6B2EAA76202CF04A00F9682D /* ViewController.swift */,
+				6B2EAA78202CF04A00F9682D /* Main.storyboard */,
+				6B2EAA7B202CF04A00F9682D /* Assets.xcassets */,
+				6B2EAA7D202CF04A00F9682D /* LaunchScreen.storyboard */,
+				6B2EAA80202CF04A00F9682D /* Info.plist */,
+			);
+			path = MDBTrivia;
+			sourceTree = "<group>";
+		};
+		6B2EAA88202CF04B00F9682D /* MDBTriviaTests */ = {
+			isa = PBXGroup;
+			children = (
+				6B2EAA89202CF04B00F9682D /* MDBTriviaTests.swift */,
+				6B2EAA8B202CF04B00F9682D /* Info.plist */,
+			);
+			path = MDBTriviaTests;
+			sourceTree = "<group>";
+		};
+		6B2EAA93202CF04B00F9682D /* MDBTriviaUITests */ = {
+			isa = PBXGroup;
+			children = (
+				6B2EAA94202CF04B00F9682D /* MDBTriviaUITests.swift */,
+				6B2EAA96202CF04B00F9682D /* Info.plist */,
+			);
+			path = MDBTriviaUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6B2EAA70202CF04A00F9682D /* MDBTrivia */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6B2EAA99202CF04B00F9682D /* Build configuration list for PBXNativeTarget "MDBTrivia" */;
+			buildPhases = (
+				6B2EAA6D202CF04A00F9682D /* Sources */,
+				6B2EAA6E202CF04A00F9682D /* Frameworks */,
+				6B2EAA6F202CF04A00F9682D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MDBTrivia;
+			productName = MDBTrivia;
+			productReference = 6B2EAA71202CF04A00F9682D /* MDBTrivia.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6B2EAA84202CF04B00F9682D /* MDBTriviaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6B2EAA9C202CF04B00F9682D /* Build configuration list for PBXNativeTarget "MDBTriviaTests" */;
+			buildPhases = (
+				6B2EAA81202CF04B00F9682D /* Sources */,
+				6B2EAA82202CF04B00F9682D /* Frameworks */,
+				6B2EAA83202CF04B00F9682D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6B2EAA87202CF04B00F9682D /* PBXTargetDependency */,
+			);
+			name = MDBTriviaTests;
+			productName = MDBTriviaTests;
+			productReference = 6B2EAA85202CF04B00F9682D /* MDBTriviaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		6B2EAA8F202CF04B00F9682D /* MDBTriviaUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6B2EAA9F202CF04B00F9682D /* Build configuration list for PBXNativeTarget "MDBTriviaUITests" */;
+			buildPhases = (
+				6B2EAA8C202CF04B00F9682D /* Sources */,
+				6B2EAA8D202CF04B00F9682D /* Frameworks */,
+				6B2EAA8E202CF04B00F9682D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6B2EAA92202CF04B00F9682D /* PBXTargetDependency */,
+			);
+			name = MDBTriviaUITests;
+			productName = MDBTriviaUITests;
+			productReference = 6B2EAA90202CF04B00F9682D /* MDBTriviaUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6B2EAA69202CF04A00F9682D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Ethan Wong";
+				TargetAttributes = {
+					6B2EAA70202CF04A00F9682D = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					6B2EAA84202CF04B00F9682D = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 6B2EAA70202CF04A00F9682D;
+					};
+					6B2EAA8F202CF04B00F9682D = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 6B2EAA70202CF04A00F9682D;
+					};
+				};
+			};
+			buildConfigurationList = 6B2EAA6C202CF04A00F9682D /* Build configuration list for PBXProject "MDBTrivia" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6B2EAA68202CF04A00F9682D;
+			productRefGroup = 6B2EAA72202CF04A00F9682D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6B2EAA70202CF04A00F9682D /* MDBTrivia */,
+				6B2EAA84202CF04B00F9682D /* MDBTriviaTests */,
+				6B2EAA8F202CF04B00F9682D /* MDBTriviaUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6B2EAA6F202CF04A00F9682D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B2EAA7F202CF04A00F9682D /* LaunchScreen.storyboard in Resources */,
+				6B2EAA7C202CF04A00F9682D /* Assets.xcassets in Resources */,
+				6B2EAA7A202CF04A00F9682D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6B2EAA83202CF04B00F9682D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6B2EAA8E202CF04B00F9682D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6B2EAA6D202CF04A00F9682D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B2EAA77202CF04A00F9682D /* ViewController.swift in Sources */,
+				6B2EAA75202CF04A00F9682D /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6B2EAA81202CF04B00F9682D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B2EAA8A202CF04B00F9682D /* MDBTriviaTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6B2EAA8C202CF04B00F9682D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B2EAA95202CF04B00F9682D /* MDBTriviaUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6B2EAA87202CF04B00F9682D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6B2EAA70202CF04A00F9682D /* MDBTrivia */;
+			targetProxy = 6B2EAA86202CF04B00F9682D /* PBXContainerItemProxy */;
+		};
+		6B2EAA92202CF04B00F9682D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6B2EAA70202CF04A00F9682D /* MDBTrivia */;
+			targetProxy = 6B2EAA91202CF04B00F9682D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6B2EAA78202CF04A00F9682D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6B2EAA79202CF04A00F9682D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6B2EAA7D202CF04A00F9682D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6B2EAA7E202CF04A00F9682D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6B2EAA97202CF04B00F9682D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		6B2EAA98202CF04B00F9682D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6B2EAA9A202CF04B00F9682D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 57X26AKKKU;
+				INFOPLIST_FILE = MDBTrivia/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.MDBTrivia;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6B2EAA9B202CF04B00F9682D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 57X26AKKKU;
+				INFOPLIST_FILE = MDBTrivia/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.MDBTrivia;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		6B2EAA9D202CF04B00F9682D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 57X26AKKKU;
+				INFOPLIST_FILE = MDBTriviaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.MDBTriviaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MDBTrivia.app/MDBTrivia";
+			};
+			name = Debug;
+		};
+		6B2EAA9E202CF04B00F9682D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 57X26AKKKU;
+				INFOPLIST_FILE = MDBTriviaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.MDBTriviaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MDBTrivia.app/MDBTrivia";
+			};
+			name = Release;
+		};
+		6B2EAAA0202CF04B00F9682D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 57X26AKKKU;
+				INFOPLIST_FILE = MDBTriviaUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.MDBTriviaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MDBTrivia;
+			};
+			name = Debug;
+		};
+		6B2EAAA1202CF04B00F9682D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 57X26AKKKU;
+				INFOPLIST_FILE = MDBTriviaUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.MDBTriviaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MDBTrivia;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6B2EAA6C202CF04A00F9682D /* Build configuration list for PBXProject "MDBTrivia" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6B2EAA97202CF04B00F9682D /* Debug */,
+				6B2EAA98202CF04B00F9682D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6B2EAA99202CF04B00F9682D /* Build configuration list for PBXNativeTarget "MDBTrivia" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6B2EAA9A202CF04B00F9682D /* Debug */,
+				6B2EAA9B202CF04B00F9682D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6B2EAA9C202CF04B00F9682D /* Build configuration list for PBXNativeTarget "MDBTriviaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6B2EAA9D202CF04B00F9682D /* Debug */,
+				6B2EAA9E202CF04B00F9682D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6B2EAA9F202CF04B00F9682D /* Build configuration list for PBXNativeTarget "MDBTriviaUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6B2EAAA0202CF04B00F9682D /* Debug */,
+				6B2EAAA1202CF04B00F9682D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6B2EAA69202CF04A00F9682D /* Project object */;
+}
