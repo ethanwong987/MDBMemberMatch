@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="JIy-9S-UaF">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -27,7 +27,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-468" y="-11"/>
+            <point key="canvasLocation" x="-1326" y="-69"/>
         </scene>
         <!--GameVC-->
         <scene sceneID="ujS-LV-aEe">
@@ -39,48 +39,35 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="2b8-nb-y5f"/>
                     </view>
+                    <navigationItem key="navigationItem" id="OSA-KI-iNf"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="StartScreen" id="ugC-Ib-xr2"/>
-                        <segue destination="cny-Ph-sjJ" kind="show" id="dm1-53-ceF"/>
+                        <segue destination="cny-Ph-sjJ" kind="show" identifier="StatsScreen" id="dm1-53-ceF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TYZ-Wj-P89" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="434" y="-501"/>
+            <point key="canvasLocation" x="44" y="-552"/>
         </scene>
-        <!--View Controller-->
+        <!--StatsVC-->
         <scene sceneID="ivR-3b-2em">
             <objects>
-                <viewController id="cny-Ph-sjJ" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="6CX-Gt-ARd" customClass="StatsVC">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fm2-da-VaH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="cny-Ph-sjJ" customClass="StatsVC" customModule="MDBTrivia" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6CX-Gt-ARd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="SK7-F1-6Hg"/>
                     </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fm2-da-VaH" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1343" y="-11"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="Jle-dq-LJP">
-            <objects>
-                <navigationController id="JIy-9S-UaF" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1Of-Tr-OKK">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="vX4-Xs-enS"/>
+                        <segue destination="hdb-yG-k46" kind="presentation" identifier="BackToGame" id="yNT-2j-Rsz"/>
                     </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ofY-Ee-ic2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                </viewController>
             </objects>
-            <point key="canvasLocation" x="-1150" y="-11"/>
+            <point key="canvasLocation" x="1468" y="-791"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="vX4-Xs-enS"/>
+        <segue reference="yNT-2j-Rsz"/>
     </inferredMetricsTieBreakers>
 </document>

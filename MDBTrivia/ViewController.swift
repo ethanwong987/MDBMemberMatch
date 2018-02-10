@@ -39,7 +39,7 @@ class ViewController: UIViewController {
     
     //Create Start Button
     func createStartButton() {
-        startButton = UIButton(frame: CGRect(x:20, y: 600, width: view.frame.width - 40, height: 40))
+        startButton = UIButton(frame: CGRect(x:view.frame.width*0.05, y: view.frame.height*0.9, width: view.frame.width - 40, height: 40))
         startButton.backgroundColor = .blue
         startButton.setTitle(("Start"), for: .normal)
         startButton.titleLabel?.font = UIFont(name: "HelveticaNeue", size: 20)
@@ -53,8 +53,9 @@ class ViewController: UIViewController {
     //Create Game Title
     func createGameTitle() {
         gameTitle = UILabel(frame: CGRect(x:30, y:view.frame.height/2, width: view.frame.width - 60, height: 45))
+        gameTitle.numberOfLines = 0
         gameTitle.text = "Member Match!"
-        gameTitle.textColor = .cyan
+        gameTitle.textColor = .blue
         gameTitle.font = UIFont.systemFont(ofSize: 35)
         gameTitle.textAlignment = .center
         view.addSubview(gameTitle)

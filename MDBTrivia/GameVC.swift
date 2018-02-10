@@ -9,8 +9,13 @@
 import UIKit
     
 var score : Int = 0
-
+var longestStreak: Int = 0
+var oneAnswerAgo: [String] = []
+var twoAnswerAgo: [String] = []
+var threeAnswerAgo: [String] = []
+    
 class GameVC: UIViewController {
+    //InitialLoad
     var button1 : UIButton!
     var button2 : UIButton!
     var button3 : UIButton!
@@ -19,39 +24,64 @@ class GameVC: UIViewController {
     var randomImageGen : Int!
     var randomButtonGen : Int!
     var scoreLabel : UILabel!
-    //var pastThreeAnswers = [String]()
-    var oneAnswerAgo: String!
-    //var twoAnswerAgo: String!
-    //var threeAnswerAgo: String!
-    //var currentStreak: Int!
+    var numQustions: Int = 0
+    var wrongMember: String!
+    //Stats
+    var senderLabel: String!
+    var currentStreak: Int = 0
+    var longestStreak: Int = 0
     var toStats = false
-    
+    var toMain = false
+    //Timer
+    var seconds = 5
+    var timer = Timer()
+    var isTimerRunning = false
 
     let memberNames : [String] = ["Daniel Andrews", "Nikhar Arora", "Tiger Chen", "Xin Yi Chen", "Julie Deng", "Radhika Dhomse", "Kaden Dippe", "Angela Dong", "Zach Govani", "Shubham Gupta", "Suyash Gupta", "Joey Hejna", "Cody Hsieh", "Stephen Jayakar", "Aneesh Jindal", "Mohit Katyal", "Mudabbir Khan", "Akkshay Khoslaa", "Justin Kim", "Eric Kong", "Abhinav Koppu", "Srujay Korlakunta", "Ayush Kumar", "Shiv Kushwah", "Leon Kwak", "Sahil Lamba", "Young Lin", "William Lu", "Louie McConnell", "Max Miranda", "Will Oakley", "Noah Pepper", "Samanvi Rai", "Krishnan Rajiyah", "Vidya Ravikumar", "Shreya Reddy", "Amy Shen", "Wilbur Shi", "Sumukh Shivakumar", "Fang Shuo", "Japjot Singh", "Victor Sun", "Sarah Tang", "Kanyes Thaker", "Aayush Tyagi", "Levi Walsh", "Carol Wang", "Sharie Wang", "Ethan Wong", "Natasha Wong", "Aditya Yadav", "Candice Ye", "Vineeth Yeevani", "Jeffrey Zhang"]
     
     var stopButton: UIButton!
+    var statsButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         createStopButton()
+        createStatsButton()
         createScore()
         gameStart()
     }
     
-    //Segue Back To Start Screen
-    @objc func backToStart() {
+    //To Stats Button
+    func createStatsButton() {
+        
+        let scnHeight = view.frame.height
+        let scnWidth = view.frame.width
+        
+        statsButton = UIButton(frame: CGRect(x:scnWidth*0.75, y: scnHeight*0.05, width: view.frame.width * 0.2, height: 40))
+        statsButton.backgroundColor = .red
+        statsButton.setTitle(("Stats"), for: .normal)
+        statsButton.titleLabel?.font = UIFont(name: "HelveticaNeue", size: 15)
+        statsButton.layer.cornerRadius = stopButton.frame.height / 4
+        statsButton.addTarget(self, action:#selector(goToStatsScreen), for: .touchUpInside)
+        view.addSubview(statsButton)
+    }
+
+    @objc func goToStatsScreen() {
         pauseGame()
-        performSegue(withIdentifier: "StartScreen", sender: self)
+        toStats = true
+        performSegue(withIdentifier: "StatsScreen", sender: self)
     }
     
     //Create Stop Button
     func createStopButton() {
-        stopButton = UIButton(frame: CGRect(x:20, y: 600, width: view.frame.width - 40, height: 40))
+        let scnHeight = view.frame.height
+        let scnWidth = view.frame.width
+        stopButton = UIButton(frame: CGRect(x:view.frame.width*0.05, y: view.frame.height*0.9, width: view.frame.width - 40, height: 40))
         stopButton.backgroundColor = .red
-        stopButton.setTitle(("Stop"), for: .normal)
+        stopButton.setTitle(("Pause"), for: .normal)
         stopButton.titleLabel?.font = UIFont(name: "HelveticaNeue", size: 20)
         stopButton.layer.cornerRadius = stopButton.frame.height / 2
-        stopButton.addTarget(self, action: #selector(backToStart), for: .touchUpInside)
+        stopButton.addTarget(self, action: #selector(pauseGame), for: .touchUpInside)
+
         view.addSubview(stopButton)
     }
     
@@ -65,6 +95,7 @@ class GameVC: UIViewController {
     }
     
     //Create Default Answer Buttons w/ titles not set
+
     func createAnswerButtons() {
         let scnHeight = view.frame.height
         let scnWidth = view.frame.width
@@ -87,7 +118,6 @@ class GameVC: UIViewController {
         memberPic = UIImageView(frame: CGRect(x:scnWidth * 0.15, y:scnHeight * 0.12, width: scnWidth * 0.7, height:scnHeight * 0.4))
         memberPic.image = UIImage(named: name)
         memberPic.contentMode = .scaleAspectFit
-        memberPic.layer.cornerRadius = memberPic.frame.size.width / 2
         memberPic.clipsToBounds = true
         memberPic.layer.borderColor = UIColor.blue.cgColor
         memberPic.layer.borderWidth = 4
@@ -101,34 +131,39 @@ class GameVC: UIViewController {
         view.addSubview(button)
     }
     
-    func clearVC() {
-        memberPic.image = nil
-        button1.isHidden = true
-        button2.isHidden = true
-        button3.isHidden = true
-        button4.isHidden = true
-    }
-    
     //If correct answer is pressed.
     @objc func selectCorrectAns(_ sender: UIButton){
+        senderLabel = sender.title(for: .normal)
+        
+        oneAnswerAgo = twoAnswerAgo
+        twoAnswerAgo = threeAnswerAgo
+        threeAnswerAgo = []
+        threeAnswerAgo.append("Correct: \(senderLabel!)")
         score += 1
-        //global score
-        //streak
-        clearVC()
+        currentStreak += 1
+        if currentStreak > longestStreak {
+            longestStreak = currentStreak
+        }
         sender.backgroundColor = .green
-        //timer 1 sec delay
-        gameStart()
+        seconds = 1
+        resetTimer()
     }
-    
+
     //If wrong answer is pressed.
     @objc func selectWrongAns(_ sender: UIButton) {
-        //global score
-        //streak
-        //Remove previous image so they don't stack on top of each other.
-        clearVC()
+        senderLabel = sender.title(for: .normal)
+        oneAnswerAgo = twoAnswerAgo
+        twoAnswerAgo = threeAnswerAgo
+        threeAnswerAgo = []
+        threeAnswerAgo.append("Wrong: \(senderLabel!)")
+        
+        if currentStreak > longestStreak {
+            longestStreak = currentStreak
+        }
+        currentStreak = 0
         sender.backgroundColor = .red
-        //timer 1 sec delay
-        gameStart()
+        seconds = 1
+        resetTimer()
     }
     
     func gameStart() {
@@ -137,6 +172,14 @@ class GameVC: UIViewController {
         var memberIndex = 0
         var randCorrectAnsIndex: Int!
         var selectedMembers = [String]()
+        
+        if isTimerRunning == false {
+            runTimer()
+            isTimerRunning = true
+        }
+        
+        //Keeps tally of how many questions have been asked.
+        numQustions += 1
         
         //Select 4 random members, then assign 1 randomly as correctAns.
         while selectedMembers.count < 4 {
@@ -176,15 +219,38 @@ class GameVC: UIViewController {
         createScore()
     }
     
-    //Stop the timer.
-    func pauseGame () {
-        
+    //Timer
+    
+    func runTimer() {
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: (#selector(GameVC.updateTimer)), userInfo: nil, repeats: true)
     }
     
+    @objc func updateTimer() {
+        seconds -= 1     //This will decrement(count down)the seconds.
+        
+        if seconds <= 0 {
+            gameStart()
+            seconds = 5
+            resetTimer()
+        }
+    }
+    
+    func resetTimer() {
+        timer.invalidate()
+        runTimer()
+        isTimerRunning = true
+    }
+    
+    @objc func pauseGame() {
+        timer.invalidate()
+        isTimerRunning = false
+    }
+    
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if(toStats){ //create button on navbar, when pressed, set toStats to true
+        if(toStats){
             let statsViewController = segue.destination as! StatsVC
-            statsViewController.longestStreak = oneAnswerAgo
+            statsViewController.longestStreak = longestStreak
         }
         
     }
