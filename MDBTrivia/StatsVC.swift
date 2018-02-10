@@ -74,7 +74,7 @@ class StatsVC: UIViewController {
         longestStrkButton.numberOfLines = 0
         longestStrkButton.text = "Your Longest streak: \(longestStreak!)"
         longestStrkButton.textColor = .blue
-        longestStrkButton.font = UIFont.systemFont(ofSize: 20)
+        longestStrkButton.font = UIFont.systemFont(ofSize: 25)
         longestStrkButton.textAlignment = .center
         view.addSubview(longestStrkButton)
     }
